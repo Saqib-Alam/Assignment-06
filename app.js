@@ -98,7 +98,7 @@
 
 
 // Task no. 11 Write a program that takes user input. Convert and
-// show the input in capital letters.
+// show the input in tital case.
 
 // var str=prompt("Enter any string")
 // str = str.toLowerCase();
@@ -557,26 +557,351 @@
 // Net Amount Payable (within Due Date) = Number of units * Charges per unit
 // & Gross Amount Payable (after Due Date) = Net Amount + Late Payment Surcharge
 
-var currentDate = new Date();
-var m=currentDate.getMonth();
-var months=["january","february","march","april","may","june","july","august","september","october","november","december"]
-month=months[m]
+// var currentDate = new Date();
+// var m=currentDate.getMonth();
+// var months=["january","february","march","april","may","june","july","august","september","october","november","december"]
+// month=months[m]
 
-document.write("<h2>K-Electric Bill</h2>")
+// document.write("<h2>K-Electric Bill</h2>")
 
-var name=prompt("Enter customer name")
-var units=prompt("Enter number of units consumed.")
-var charges=5.79
+// var name=prompt("Enter customer name")
+// var units=prompt("Enter number of units consumed.")
+// var charges=5.79
 
-document.write("Customer Name : "+name)
-document.write("</br>Current Month : "+month)
-document.write("</br>Number of Units : "+units)
-document.write("</br>Charges per Unit : "+charges)
+// document.write("Customer Name : "+name)
+// document.write("</br>Current Month : "+month)
+// document.write("</br>Number of Units : "+units)
+// document.write("</br>Charges per Unit : "+charges)
 
-netAmmount=(units*charges)
-document.write("</br>Net Amount Payable (within Due Date) : "+netAmmount.toFixed(2))
+// netAmmount=(units*charges)
+// document.write("</br>Net Amount Payable (within Due Date) : "+netAmmount.toFixed(2))
 
-surcharges=(netAmmount*10)/100
-document.write("</br>Late amount Surcharges : "+surcharges.toFixed(2))
+// surcharges=(netAmmount*10)/100
+// document.write("</br>Late amount Surcharges : "+surcharges.toFixed(2))
 
-document.write("</br>Gross Amount Payable (after Due Date) : "+(surcharges+netAmmount).toFixed(2))
+// document.write("</br>Gross Amount Payable (after Due Date) : "+(surcharges+netAmmount).toFixed(2))
+
+
+
+                                // CHAPTER 35-38
+
+// Task no 1 Write a function that displays current date & time in your
+// browser.                              
+
+// function currentDate() {
+//     var cDate = new Date();
+//     document.write("Current Date and Time : "+cDate)
+
+// }
+
+// currentDate();
+
+
+// Task no 2 Write a function that takes first & last name and then it
+// greets the user using his full name.
+
+// function greeting(){
+
+//     var firstName=prompt("Enter your first Name")
+//     var lastName=prompt("Enter your last Name")
+//     var fullName=firstName +" "+ lastName;
+//     alert("Hi! "+fullName)
+// }
+
+// greeting();
+
+
+// Task no 3 Write a function that adds two numbers (input by user)
+// and returns the sum of two numbers.
+
+// function sum(a,b){
+
+//     var d=a+b;
+//     alert(d)
+    
+// }
+
+//     var a=+prompt("Enter first number to add")
+//     var b=+prompt("Enter second number to add")
+
+// sum(a,b);
+
+
+// Task no 4  Calculator:
+// Write a function that takes three arguments num1, num2
+// & operator & compute the desired operation. Return and
+// show the desired result in your browser.
+
+
+// function calculator(num1,operator,num2){
+
+// if(operator==="+"){
+//     return num1 + num2;
+// }
+  
+// else if(operator==="-"){
+//     return num1 - num2;
+// }
+  
+// else if(operator==="*"){
+//     return num1 * num2;
+// }
+  
+// else if(operator==="/"){
+//     return num1 / num2;
+// }
+// else{
+//     return "Incorrect Operator"
+// }
+
+// }
+
+//     var num1=+prompt("Enter first number")
+//     var num2=+prompt("Enter second number")
+//     var operator=prompt("Enter Operator")
+
+
+// alert(calculator(num1,operator,num2));
+
+// Task no 5. Write a function that squares its argument.
+
+// function square(a){
+       
+//     return a*a
+// }
+
+// num=+prompt("Enter any number to square")
+// alert("Square of given number is : "+square(num))
+
+
+// Task no 6. Write a function that computes factorial of a number.
+
+// function factorial(n){
+// var fact=1;
+//     for(var i=n; i>=1;i--){
+       
+//         fact=fact*i;
+//     }
+//     return fact;
+
+// }
+
+// var num=prompt("Enter any number to find is factorial")
+// alert("Factorial of number is : "+factorial(num))
+
+
+// Task no 7 Write a function that take start and end number as inputs
+// & display counting in your browser.
+
+// function counting(a,b){
+
+//     for(var i=a;i<=b;i++){
+//      if()
+//         document.write(i+" ")
+//     }
+// }
+
+// var start=prompt("Enter starting number for counting")
+// var end=prompt("Enter end number for counting")
+
+// counting(start,end);
+
+
+// Task no 8 Write a nested function that computes hypotenuse of a
+// right angle triangle.
+// Hypotenuse2 = Base2 + Perpendicular2
+// Take base and perpendicular as inputs.
+// Outer function : calculateHypotenuse()
+// Inner function: calculateSquare()
+
+
+// function calculateHypotenuse(b,p){
+
+
+//     function calculateSquare(b,p){
+        
+//           var base=b*b;
+//           var per=p*p;
+//           return base+per;
+
+//     }
+//     var hyp=calculateSquare(b,p);
+//     alert ((Math.sqrt(hyp)).toFixed(2));
+// }
+
+// var x=+prompt("Enter base")
+// var y=+prompt("Enter perpendicular")
+
+
+// calculateHypotenuse(x,y);
+
+
+
+// Task no 9. Write a function that calculates the area of a rectangle.
+// A = width * height
+// Pass width and height in following manner:
+// i. Arguments as value
+// ii. Arguments as variables
+
+
+// function rectangle(w,h){
+
+//      alert("Area of rectangle is : "+(w*h))
+
+// }
+
+// var h=prompt("To calculate area of rectangle enter value of heigth since width is 22 by default.")
+
+// rectangle(22,h);
+
+
+
+// Task no 10. Write a JavaScript function that checks whether a passed
+// string is palindrome or not?
+// A palindrome is word, phrase, or sequence that reads the same backward as
+// forward, e.g., madam.
+
+
+// function palindrome(word){
+
+//   var palin="";
+//       for(var i=word.length - 1;i>=0;i--){
+
+//         palin +=word[i]
+//       }
+//       if(word===palin){
+//           alert("Given word is palindrome")
+//       }
+
+//       else{
+//           alert("Given word is not palindrome")
+//       }
+// }
+
+// var word=prompt("Enter word to check whether it is pelindrome")
+
+// palindrome(word);
+
+
+// Task no 11. Write a JavaScript function that accepts a string as a
+// parameter and converts the first letter of each word of the
+// string in upper case.
+// EXAMPLE STRING : 'the quick brown fox'
+// EXPECTED OUTPUT : 'The Quick Brown Fox'
+
+
+// function titleCase(str){
+
+//   str = str.toLowerCase();
+//   var str=str.split(" ")
+//   for( var i=0;i<str.length;i++){
+//     str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+    
+//     }
+
+//     return str
+
+
+// }
+// var str=prompt("Enter any string to cenvert in title case");
+
+// alert("Tile case of string is : "+titleCase(str).join(" "))
+
+
+// Task no 12. Write a JavaScript function that accepts a string as a
+// parameter and find the longest word within the string.
+// EXAMPLE STRING : 'Web Development Tutorial'
+// EXPECTED OUTPUT : 'Development'
+
+
+// function findLongestWord(str) {
+//   return str.length;
+// }
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+
+
+// function longestWord(str){
+
+//   var split=str.split(" ");
+//   var longestWord=0;
+
+//   for(var i=0;i<split.length;i++){
+
+//     if(split[i].length>longestWord){
+
+//       longestWord=split[i].length;
+//     }
+//   }
+
+//     for(var j=0;j<split.length;j++){
+
+//       if(split[j].length==longestWord){
+
+//         alert("The longest word is : "+split[j])
+//       }
+//     }
+// }
+
+// var str="The quick brown fox jumped over the lazy dog";
+// longestWord(str);
+
+
+
+
+// Task no 13. Write a JavaScript function that accepts two arguments, a
+// string and a letter and the function will count the number of
+// occurrences of the specified letter within the string.
+// Sample arguments : 'JSResourceS.com', 'o'
+
+
+// function occurences(str,occ){
+
+//   var a=0;
+//   var s=str.toLowerCase();
+//   for(var i=0; i<str.length;i++){
+  
+//       if(s.slice(i,i+(occ.length))==occ){
+//       var a=a+1
+//       }
+//   }
+  
+//   document.write("Text : "+str+"</br>There are "+a+" Occuranes of the word "+occ)
+
+// }
+
+// var str="The quick brown fox jumps over the lazy dog";
+// var occ="the";
+
+// occurences(str,occ);
+
+
+// Task no 14. The Geometrizer
+// Create 2 functions that calculate properties of a circle, using
+// the definitions here.
+// Create a function called calcCircumference:
+// • Pass the radius to the function.
+// • Calculate the circumference based on the radius, and output
+// "The circumference is NN".
+// Create a function called calcArea:
+// • Pass the radius to the function.
+// • Calculate the area based on the radius, and output "The area
+// is NN".
+// Circumference of circle = 2πr
+// Area of circle = πr2
+
+//  function calcCircumference(r){
+       
+//      document.write("The Circumference of circle is : "+(2*3.142*r).toFixed(2))
+
+//  }
+
+// function calcArea(r){
+   
+//   document.write("</br>The Area of circle is : "+(3.142*r*r).toFixed(2))
+
+// }
+
+//  var r=prompt("Enter radius to calculate circumference and Area of circle")
+
+//  calcCircumference(r);
+//  calcArea(r);
